@@ -1,0 +1,24 @@
+{
+  "name": "team-plugins",
+  "owner": {
+    "name": "Your Team"
+  },
+  "metadata": {
+    "description": "Custom team workspace plugins and configurations",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "team-workspace-setup",
+      "source": "./plugins/team-workspace-setup",
+      "description": "Team-standardized commands, MCP configurations, and productivity enhancements",
+      "version": "1.0.0",
+      "author": {
+        "name": "Your Team"
+      },
+      "homepage": "https://github.com/lucavehbiu/claude-plugins",
+      "repository": "https://github.com/lucavehbiu/claude-plugins",
+      "license": "MIT"
+    }
+  ]
+}
