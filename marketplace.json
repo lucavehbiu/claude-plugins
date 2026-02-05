@@ -11,7 +11,7 @@
       "displayName": "Team Workspace Setup",
       "description": "Team-standardized commands, MCP configurations, and productivity enhancements",
       "version": "1.0.0",
-      "path": "."
+      "path": "plugins/team-workspace-setup"
     }
   ]
 }
