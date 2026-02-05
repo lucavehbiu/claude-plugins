@@ -20,16 +20,16 @@ A comprehensive Claude Code plugin that provides team-standardized commands, MCP
 - **Enhanced status line** - Shows user@hostname, current directory, and model name with colors
 - **Pre-configured MCP servers** - Ready-to-use integrations
 
-### Recommended MCP Servers
+### Auto-Configured MCP Servers
 
-This plugin works best with the following MCP servers configured:
+This plugin automatically configures 4 MCP servers:
 
 1. **Brave Search** - Web search capabilities
 2. **PostgreSQL** - Database access and queries
 3. **Filesystem** - File system operations
 4. **Memory** - Persistent memory across sessions
-5. **Serena** - Advanced code analysis and manipulation
-6. **Playwright** - Browser automation
+
+**⚠️ Important:** MCPs require environment variables to be set. See [MCP-SETUP.md](MCP-SETUP.md) for configuration instructions.
 
 ## 🚀 Quick Start
 

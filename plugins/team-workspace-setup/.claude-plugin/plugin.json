@@ -20,5 +20,39 @@
         ]
       }
     ]
+  },
+  "mcpServers": {
+    "brave-search": {
+      "command": "/opt/homebrew/bin/npx",
+      "args": [
+        "@modelcontextprotocol/server-brave-search"
+      ],
+      "env": {
+        "BRAVE_API_KEY": "${BRAVE_API_KEY}",
+        "BRAVE_TIMEOUT": "30000"
+      }
+    },
+    "postgres": {
+      "command": "/opt/homebrew/bin/npx",
+      "args": [
+        "@modelcontextprotocol/server-postgres",
+        "${POSTGRES_CONNECTION_STRING}"
+      ]
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "${WORKSPACE_PATH}"
+      ]
+    },
+    "memory": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ]
+    }
   }
 }
