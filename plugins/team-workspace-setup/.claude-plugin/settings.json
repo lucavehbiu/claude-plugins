@@ -1,0 +1,6 @@
+{
+  "statusLine": {
+    "type": "command",
+    "command": "input=$(cat); printf \"\\033[1;36m$(whoami)\\033[0m@\\033[1;32m$(hostname -s)\\033[0m \\033[1;34m$(echo \"$input\" | jq -r '.workspace.current_dir | gsub(\"/Users/[^/]+\"; \"~\")')\\033[0m \\033[1;35m[$(echo \"$input\" | jq -r '.model.display_name')]\\033[0m\""
+  }
+}

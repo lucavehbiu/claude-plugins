@@ -2,58 +2,23 @@
   "name": "team-workspace-setup",
   "version": "1.0.0",
   "description": "Complete team workspace setup with custom commands, MCP servers, and productivity enhancements",
-  "author": "Your Team",
-  "repository": "https://github.com/your-org/team-workspace-setup",
-  "license": "MIT",
-  "commands": [
-    {
-      "name": "context",
-      "description": "Use Context7 MCP to get latest documentation for project technologies",
-      "file": "commands/context.md"
-    },
-    {
-      "name": "format",
-      "description": "Format SQL queries using standardized formatting rules",
-      "file": "commands/format.md"
-    },
-    {
-      "name": "puppeter",
-      "description": "Open Arc browser and navigate to URL for testing",
-      "file": "commands/puppeter.md"
-    },
-    {
-      "name": "serena",
-      "description": "Ensure Serena MCP is running and utilize project memories",
-      "file": "commands/serena.md"
-    }
-  ],
-  "settings": {
-    "hooks": {
-      "Stop": [
-        {
-          "matcher": "",
-          "hooks": [
-            {
-              "type": "command",
-              "command": "afplay /System/Library/Sounds/Glass.aiff"
-            }
-          ]
-        }
-      ]
-    },
-    "statusLine": {
-      "type": "command",
-      "command": "input=$(cat); printf \"\\033[1;36m$(whoami)\\033[0m@\\033[1;32m$(hostname -s)\\033[0m \\033[1;34m$(echo \"$input\" | jq -r '.workspace.current_dir | gsub(\"/Users/YOUR_USERNAME\"; \"~\")')\\033[0m \\033[1;35m[$(echo \"$input\" | jq -r '.model.display_name')]\\033[0m\""
-    }
+  "author": {
+    "name": "Your Team"
   },
-  "dependencies": {
-    "recommendedPlugins": [
-      "serena@claude-plugins-official",
-      "commit-commands@claude-code-plugins",
-      "pr-review-toolkit@claude-code-plugins",
-      "feature-dev@claude-code-plugins",
-      "frontend-design@claude-code-plugins",
-      "python-development@claude-code-workflows"
+  "repository": "https://github.com/lucavehbiu/claude-plugins",
+  "license": "MIT",
+  "commands": "./commands",
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "afplay /System/Library/Sounds/Glass.aiff"
+          }
+        ]
+      }
     ]
   }
 }
