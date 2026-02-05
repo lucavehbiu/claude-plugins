@@ -22,14 +22,17 @@ A comprehensive Claude Code plugin that provides team-standardized commands, MCP
 
 ### Auto-Configured MCP Servers
 
-This plugin automatically configures 4 MCP servers:
+This plugin automatically configures 7 MCP servers:
 
-1. **Brave Search** - Web search capabilities
-2. **PostgreSQL** - Database access and queries
-3. **Filesystem** - File system operations
-4. **Memory** - Persistent memory across sessions
+1. **Brave Search** - Web search capabilities (needs BRAVE_API_KEY)
+2. **PostgreSQL** - Database access and queries (needs POSTGRES_CONNECTION_STRING)
+3. **Filesystem** - File system operations (needs WORKSPACE_PATH)
+4. **Memory** - Persistent memory across sessions (no config needed)
+5. **Context7** - Latest library documentation (needs UPSTASH_CONTEXT7_TOKEN)
+6. **Serena** - Code analysis and refactoring (no config needed)
+7. **Playwright** - Browser automation for testing (no config needed)
 
-**⚠️ Important:** MCPs require environment variables to be set. See [MCP-SETUP.md](MCP-SETUP.md) for configuration instructions.
+**⚠️ Important:** Some MCPs require environment variables to be set. See [MCP-SETUP.md](MCP-SETUP.md) for configuration instructions.
 
 ## 🚀 Quick Start
 
@@ -149,7 +152,7 @@ Ensures Serena MCP is active and checks project memories in `.serena/memories/`.
 ### For Your Team
 
 1. **Update API Keys**: Replace placeholder values in MCP server configurations
-2. **Modify Commands**: Edit `.md` files in `commands/` directory
+2. **Modify Skills**: Edit `SKILL.md` files in `skills/` subdirectories
 3. **Adjust Settings**: Update `plugin.json` for custom hooks or status line
 4. **Add Team Tools**: Include additional MCP servers your team uses
 

@@ -1,6 +1,6 @@
 # MCP Server Setup
 
-This plugin automatically configures 4 MCP servers, but they require environment variables to be set.
+This plugin automatically configures 7 MCP servers. Some require environment variables to be set.
 
 ## Required Environment Variables
 
@@ -15,7 +15,17 @@ export POSTGRES_CONNECTION_STRING="postgresql://username:password@host:5432/data
 
 # Your workspace path
 export WORKSPACE_PATH="/Users/YOUR_USERNAME/Documents/GitHub"
+
+# Context7 token (optional - for latest library docs)
+export UPSTASH_CONTEXT7_TOKEN="YOUR_CONTEXT7_TOKEN_HERE"
 ```
+
+## MCPs That Don't Need Configuration
+
+These MCPs work out of the box (no env vars needed):
+- **memory**: Persistent memory across sessions
+- **serena**: Code analysis and refactoring assistant
+- **playwright**: Browser automation for testing
 
 ## Setup Steps
 
@@ -40,11 +50,14 @@ source ~/.zshrc  # or source ~/.bashrc
 /mcp
 ```
 
-You should see all 4 servers listed:
-- brave-search
-- postgres
-- filesystem
-- memory
+You should see all 7 servers (some may show errors if env vars not set):
+- **brave-search** (needs BRAVE_API_KEY)
+- **postgres** (needs POSTGRES_CONNECTION_STRING)
+- **filesystem** (needs WORKSPACE_PATH)
+- **memory** (works without config)
+- **context7** (needs UPSTASH_CONTEXT7_TOKEN - optional)
+- **serena** (works without config)
+- **playwright** (works without config)
 
 ## Getting Credentials
 
@@ -59,6 +72,11 @@ You should see all 4 servers listed:
 **Workspace Path:**
 - Use your actual GitHub/projects directory
 - Example: `/Users/yourusername/Documents/GitHub`
+
+**Context7 Token:**
+- Sign up at: https://context7.com
+- Get token from dashboard
+- Used for fetching latest library documentation
 
 ## Troubleshooting
 

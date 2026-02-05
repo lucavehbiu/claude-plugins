@@ -1,7 +1,7 @@
 {
   "name": "team-workspace-setup",
-  "version": "1.0.0",
-  "description": "Complete team workspace setup with custom commands, MCP servers, and productivity enhancements",
+  "version": "1.1.0",
+  "description": "Complete team workspace setup with 4 skills, 7 MCP servers, and productivity enhancements",
   "author": {
     "name": "Your Team"
   },
@@ -52,6 +52,30 @@
       "args": [
         "-y",
         "@modelcontextprotocol/server-memory"
+      ]
+    },
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7"
+      ],
+      "env": {
+        "UPSTASH_CONTEXT7_TOKEN": "${UPSTASH_CONTEXT7_TOKEN}"
+      }
+    },
+    "serena": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@anthropic/mcp-server-serena"
+      ]
+    },
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp-server"
       ]
     }
   }
