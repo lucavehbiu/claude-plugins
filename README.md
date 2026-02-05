@@ -18,26 +18,48 @@ Team-standardized commands, MCP server configurations, and productivity enhancem
 
 ## Installation
 
-**1. Add this marketplace:**
+Installing is super simple - just run these commands in Claude Code:
+
+**1. Add the marketplace:**
 ```
-/plugins add lucavehbiu/claude-plugins
+/plugin marketplace add lucavehbiu/claude-plugins
 ```
+You should see: `✓ Successfully added marketplace: team-plugins`
 
 **2. Install the plugin:**
 ```
-/plugins install team-workspace-setup@lucavehbiu/claude-plugins
+/plugin install team-workspace-setup@team-plugins
 ```
 
 **3. Enable it:**
 ```
-/plugins enable team-workspace-setup@lucavehbiu/claude-plugins
+/plugin enable team-workspace-setup@team-plugins
 ```
 
 **4. Restart Claude Code**
 
-**5. Test:**
+**5. Test it works:**
 ```
 /context
+```
+
+That's it! No manual cloning or file copying needed. The plugin installs directly from GitHub.
+
+### What You Get
+
+- ✅ `/context` - Fetch latest docs using Context7 MCP
+- ✅ `/format` - Format SQL queries with team standards
+- ✅ `/puppeter` - Open Arc browser for testing
+- ✅ `/serena` - Check Serena MCP status
+- ✅ 🔊 Audio notification when Claude finishes (Glass sound)
+- ✅ 🎨 Colorful status line: `user@hostname ~/path [Model]`
+
+### Updating
+
+When we push updates to the plugin, refresh with:
+```
+/plugin marketplace update team-plugins
+/plugin update team-workspace-setup@team-plugins
 ```
 
 ## For Contributors
