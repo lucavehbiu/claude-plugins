@@ -1,0 +1,60 @@
+{
+  "name": "team-workspace-setup",
+  "version": "1.0.0",
+  "description": "MCP server configurations for team workspace",
+  "mcpServers": {
+    "brave-search": {
+      "command": "/opt/homebrew/bin/npx",
+      "args": [
+        "@modelcontextprotocol/server-brave-search"
+      ],
+      "env": {
+        "BRAVE_API_KEY": "${BRAVE_API_KEY}",
+        "BRAVE_TIMEOUT": "30000"
+      },
+      "description": "Web search capabilities using Brave Search API"
+    },
+    "postgres": {
+      "command": "/opt/homebrew/bin/npx",
+      "args": [
+        "@modelcontextprotocol/server-postgres",
+        "${POSTGRES_CONNECTION_STRING}"
+      ],
+      "description": "PostgreSQL database access for team database"
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "${WORKSPACE_PATH}"
+      ],
+      "description": "Filesystem access to team workspace directory"
+    },
+    "memory": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ],
+      "description": "Persistent memory storage across Claude sessions"
+    }
+  },
+  "environmentVariables": {
+    "BRAVE_API_KEY": {
+      "description": "Brave Search API key - get from team 1Password",
+      "required": true,
+      "example": "YOUR_BRAVE_API_KEY"
+    },
+    "POSTGRES_CONNECTION_STRING": {
+      "description": "PostgreSQL connection string",
+      "required": true,
+      "example": "postgresql://username:password@localhost:5432/database"
+    },
+    "WORKSPACE_PATH": {
+      "description": "Path to team workspace directory",
+      "required": true,
+      "example": "/Users/username/Documents/GitHub/"
+    }
+  }
+}
