@@ -7,7 +7,7 @@
   },
   "repository": "https://github.com/lucavehbiu/claude-plugins",
   "license": "MIT",
-  "commands": "./commands",
+  "skills": "./skills",
   "hooks": {
     "Stop": [
       {

@@ -1,5 +1,8 @@
-# /format
-format the sql query provided using this format below:
+---
+description: Format SQL queries using standardized formatting rules
+---
+
+Format the SQL query provided using this format below:
 
 # SQL Formatting Rules
 
